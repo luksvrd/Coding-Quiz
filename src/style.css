@@ -97,7 +97,7 @@ main {
 
 /* Question Screen */
 #quiz {
-  display: block;
+  display: none;
 }
 
 #quiz li {
@@ -111,5 +111,39 @@ main {
 
 #quiz button {
   text-align: left;
+}
+
+/* Quiz End Screen */
+#results {
+  display: block;
+  font-size: large;
+}
+
+/* High Scores */
+
+#high-scores {
+  /* display: block; */
+}
+
+#high-scores ol {
+  overflow-y: scroll;
+  max-height: 200px;
+}
+
+#reset {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3em;
+  font-weight: 500;
+  color: white;
+  padding: 8px;
+  outline: none;
+  border: none;
+  border-radius: .5rem;
+  background: black;
+  cursor: pointer;
+  display: block;
 }
 
