@@ -12,32 +12,30 @@
     <title>JavaScript Quiz!</title>
   </head>
   <body>
-      <!-- main outer div -->
+      <!-- MAIN OUTER BOX -->
       <div class="outter-box">
 
-
-        <!-- nav bar -->
-        <nav class="top-bar">
-          <button type="button">View Highscores</button>
+        <!-- TOP BAR -->
+        <header class="top-bar">
+          <a href="high-scores.html">View Highscores</a>
           <p>Timer: 00:00</p>
-        </nav>
+        </header>
 
-        <!-- inner div -->
+        <!-- INNER box -->
         <div class="inner-box">
 
-          <!-- Main header/quiz intro -->
-          <header class="quiz-info">
-
-          </header>
-
-          <!-- main quiz content -->
-          <main>
+          <!-- MAIN HEADER/QUIZ INFO (HIDDEN ONCE QUIZ START)-->
+          <section class="quiz-info">
+            <h1>Welcome to the JavaScript Quiz!</h1>
+            <p>Answer the multiple choice code questions within the given time. 10 seconds will be deducted after every inccorect answer. To begin, click the Start button!</p>
+            <button type="button" class="start-btn">Start Quiz!</button>
+          </section>
 
           </main>
 
         </div>
       </div>
 
-    <script src="./script.js"></script>
+    <script type="module" src="./src/script.js"></script>
   </body>
 </html>
