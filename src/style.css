@@ -3,6 +3,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid blue;
+
+  /* border: 1px solid blue; */
   font-family: Mali, cursive;
+  color: black;
 }
+
+body {
+  background-color: cadetblue;
+  overflow: hidden;
+}
+
+/* MAIN Outter Box */
+.outter-box {
+  padding: 1rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
