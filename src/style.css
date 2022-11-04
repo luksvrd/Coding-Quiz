@@ -54,13 +54,8 @@ h1, h2 {
   text-align: center;
 }
 
-li {
-  list-style: none;
-  text-align: center;
-}
-
 #start-btn {
-  /* display: none; */
+  display: none;
   position: absolute;
   top: 35%;
   left: 50%;
@@ -78,7 +73,6 @@ li {
 
 
 .quiz-intro, main {
-  /* display: none; */
   padding: 1rem;
   margin-bottom: 65vh;
   margin-left: 8%;
@@ -87,8 +81,35 @@ li {
   background-color: lightgray;
 }
 
-.quiz-intro p {
+#quiz-intro {
+  display: none;
+}
+
+#quiz-intro p {
   text-align: left;
 }
 
+/* Main Quiz Content */
+main {
+  display: block;
+  background-color: lightblue;
+}
+
+/* Question Screen */
+#quiz {
+  display: block;
+}
+
+#quiz li {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: .5rem;
+}
+
+#quiz button {
+  text-align: left;
+}
 
