@@ -1,123 +1,188 @@
 /* Global Declarations */
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Mali, cursive;
-  color: black;
+
+  /* color: black; */
 }
 
-body {
-  background-color: cadetblue;
-  overflow: scroll;
+:root {
+  --hue-neutral: 200;
+  --hue-wrong: 0;
+  --hue-correct: 145%;
 }
 
-/* MAIN Outter Box */
-.outter-box {
+/* Body Outter Container */
+.outter-container {
+  --hue: var(--hue-neutral);
+
   padding: 1rem;
+  margin: 0;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: start;
+  align-content: center;
+  background-color: hsl(var(--hue) 100% 20%);
+  overflow: scroll;
 }
 
 /* Top-bar Container */
-header {
-  display: block;
-  font-size: 1.3em;
-  padding: .35em;
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.5em;
+  padding: 1em;
   margin: .25em;
+  color: white;
 }
 
-.top-bar p {
-  float: right;
+.top-bar a {
+  color: white;
 }
 
-/* Inner Container Section */
+/* Inner Quiz Container Section */
 
-.inner-box {
-  /* background-color: aliceblue; */
+.inner-container {
+  background-color: white;
   height: 100%;
-  width: 40%;
-  margin: 0;
+  width: 800px;
+  max-width: 90%;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-self: center;
   border: 3px solid black;
   border-radius: 1rem;
+  box-shadow: 0 0 10px 2px;
 }
 
 /* Quiz Intro Section */
+#start-btn, #reset {
+  /* display: none; */
 
-h1, h2 {
-  text-align: center;
-}
-
-#start-btn {
-  display: none;
-  position: absolute;
+  /* position: absolute;
   top: 35%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.3em;
-  font-weight: 500;
+  transform: translate(-50%, -50%); */
+  font-size: 1.25em;
+  font-weight: bold;
   color: white;
-  padding: 8px;
-  outline: none;
-  border: none;
+  padding: .5rem;
+  margin: 10px;
+
+  /* outline: none;
+  border: none; */
   border-radius: .5rem;
   background: black;
   cursor: pointer;
 }
 
-
-.quiz-intro, main {
+#intro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 1rem;
-  margin-bottom: 65vh;
   margin-left: 8%;
   margin-right: 8%;
-  border-radius: 1rem;
-  background-color: lightgray;
+  margin-bottom: 5vh;
 }
 
-#quiz-intro {
-  display: none;
-}
-
-#quiz-intro p {
-  text-align: left;
-}
-
-/* Main Quiz Content */
-main {
-  display: block;
-  background-color: lightblue;
-}
-
-/* Question Screen */
-#quiz {
-  display: none;
-}
-
-#quiz li {
-  list-style: none;
+#intro p {
   text-align: center;
+}
+
+#quiz h2 {
+  text-align: center;
+  padding: .8rem;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+.answer-grid {
+  list-style: none;
+  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px;
+  padding: 20px;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+
+  border: 1px hsl(var(--hue) 100% 30%);
+  background-color: hsl(var(--hue) 100% 50%);
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+/* .btn:hover {
+  border-color: black;
+} */
+
+body.correct {
+  --hue: var(--hue-correct);
+}
+
+body.worng {
+  --hue: var(--hue-wrong);
+}
+
+#answers:hover {
+  border-color: black;
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+#results {
+  font-size: large;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  padding: .5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-bottom: 5vh;
+
+  /* border: 1px solid black; */
 }
 
-#quiz button {
-  text-align: left;
+#results h2, p, form {
+  padding: .6rem;
 }
 
 /* Quiz End Screen */
-#results {
-  display: block;
-  font-size: large;
+.highscores {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.5em;
+  padding: 1em;
+  margin: .25em;
+  color: black;
 }
+
+
 
 /* High Scores */
 
@@ -130,20 +195,6 @@ main {
   max-height: 200px;
 }
 
-#reset {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.3em;
-  font-weight: 500;
-  color: white;
-  padding: 8px;
-  outline: none;
-  border: none;
-  border-radius: .5rem;
-  background: black;
-  cursor: pointer;
-  display: block;
+.hidden {
+  display: none;
 }
-

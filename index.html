@@ -11,42 +11,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Mali&display=swap" rel="stylesheet">
     <title>JavaScript Quiz!</title>
   </head>
-  <body>
-      <!-- MAIN OUTER BOX -->
-      <div class="outter-box">
-
+  <body class="outter-container">
         <!-- TOP BAR -->
         <header class="top-bar">
           <a href="high-scores.html">High Scores</a>
-          <p>Timer:<span id="seconds"></span></p>
+          <p>
+            Time Remaining:<span id="seconds"></span></p>
         </header>
 
         <!-- INNER box -->
-        <div class="inner-box">
-
-          <!-- --------------------------------- -->
-          <!--QUIZ INFO (HIDDEN ONCE QUIZ START)-->
-          <!-- --------------------------------- -->
-          <section class="quiz-intro">
+        <main class="inner-container">
+          <div id="intro-container">
+          <section id="intro">
             <h1>Welcome to the JavaScript Quiz!</h1>
+          <!-- --------------------------------- -->
+          <!--QUIZ INTRO (HIDDEN ONCE QUIZ START)-->
+          <!-- --------------------------------- -->
+
             <p>Answer the multiple choice code questions within the given time. 10 seconds will be deducted after every inccorect answer. To begin, click the Start button!</p>
             <button id="start-btn" type="button">Start Quiz!</button>
           </section>
+        </div>
 
           <!-- --------------------------------- -->
           <!-- QUIZ QUESTIONS (HIDDEN FOR HIGHSCORES)-->
           <!-- --------------------------------- -->
-          <main>
             <section id="quiz" class="hidden">
-              <h2>First Question</h2>
-              <ul>
+              <h2></h2>
+              <ul id="answers" class="answer-grid">
                 <!-- THIS WILL BE GENERATED IN .JS -->
-                <!-- <li><button type="submit">Answer 1</button></li>
-                <li><button type="submit">Answer 2</button></li>
-                <li><button type="submit">Answer 3</button></li>
-                <li><button type="submit">Answer 4</button></li> -->
+                <!-- <li><button class="btn">Answer 1</button></li>
+                <li><button class="btn">Answer 2</button></li>
+                <li><button class="btn">Answer 3</button></li>
+                <li><button class="btn">Answer 4</button></li> -->
               </ul>
+              <!-- Correct/Wrong -->
+              <p class="hidden"></p>
             </section>
+
 
             <!-- --------------------------------- -->
             <!-- HIGHSCORE/INITIALS SCREEN ()-->
@@ -59,6 +61,7 @@
                   <!-- Score goes here -->
                 </span>
               </p>
+
               <form>
                 <label for="initials">Enter Initials: </label>
                 <input type="text" id="initials" name="initials"/>
@@ -66,10 +69,7 @@
               </form>
             </section>
 
-          </main>
-
-        </div>
-      </div>
+        </main>
 
     <script type="module" src="./src/quiz.js"></script>
   </body>
