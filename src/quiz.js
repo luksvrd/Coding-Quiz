@@ -101,7 +101,7 @@ function unmountQuestionResult() {
 function init() {
   introP.classList.add("hidden");
   quiz.classList.remove("hidden");
-
+  correctAnswer = QUESTIONS.answer
   // Load first question - rest will be from 'handleClick
   renderNxtQuestion();
 
