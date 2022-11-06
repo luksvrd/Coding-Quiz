@@ -45,11 +45,15 @@ function handleSubmit(event) {
 
 // -------------------- Needs event inside funciton
 function isCorrect(event) {
-  if (isCorrectAnswer) {
-    startButton.dataset.correct = isCorrect
+  let correct = ""
+  if(event == answer) {
+    correct = true
+  } else {
+    correct = false
   }
-  startButton.addEventListener("click", selectAnswer)
+  choiceButton.addEventListener("click", selectAnswer);
 }
+
 
 function keepTime() {
   const intervalId = setInterval(() => {
@@ -77,7 +81,7 @@ function renderNxtQuestion() {
   currentQuestion.choices.forEach((choice) => {
     const li = document.createElement("li");
 
-    li.innerHTML = '<button type="button">${choice}</button>';
+    li.innerHTML = `<button type="button" class="choice-button">${choice}</button>`;
     quizList.appendChild(li);
   })
 }
