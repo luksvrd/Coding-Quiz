@@ -62,6 +62,10 @@
   box-shadow: 0 0 10px 2px;
 }
 
+h1, h2 {
+  text-align: center;
+}
+
 /* Quiz Intro Section */
 #start-btn, #reset {
   /* display: none; */
@@ -149,9 +153,7 @@ body.worng {
   --hue: var(--hue-wrong);
 }
 
-h1, h2 {
-  text-align: center;
-}
+
 
 #results {
   font-size: large;

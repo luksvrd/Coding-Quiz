@@ -43,9 +43,8 @@ function handleSubmit(event) {
   location.reload();
 }
 
-// -------------------- Needs event inside funciton
 function isCorrect(event) {
-  let correct = ""
+  let isCorrectAnswer = QUESTIONS.answer
   if(event == answer) {
     correct = true
   } else {
@@ -81,7 +80,7 @@ function renderNxtQuestion() {
   currentQuestion.choices.forEach((choice) => {
     const li = document.createElement("li");
 
-    li.innerHTML = `<button type="button" class="choice-button">${choice}</button>`;
+    li.innerHTML = `<button type="button">${choice}</button>`;
     quizList.appendChild(li);
   })
 }
