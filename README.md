@@ -9,7 +9,7 @@ Ideally this website would have behaved with 3 phases, first being the quiz intr
 
 ## Website
 https://luksvrd.github.io/Coding-Quiz/
-![Code Quiz Screenshot] (code-quiz.png)
+![Code Quiz Screenshot] (codequiz.png)
 
 
 ## Contributions
