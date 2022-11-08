@@ -10,7 +10,7 @@ Ideally this website would have behaved with 3 phases, first being the quiz intr
 ## Website
 https://luksvrd.github.io/Coding-Quiz/
 
-[/images/codequiz.png](https://github.com/luksvrd/Coding-Quiz/blob/master/images/code%20quiz.png?raw=true)
+![code quiz photo](https://github.com/luksvrd/Coding-Quiz/blob/master/images/code%20quiz.png?raw=true)
 
 
 ## Contributions
