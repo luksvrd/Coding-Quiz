@@ -8,7 +8,8 @@ HTML, CSS, amd JavaScript
 Ideally this website would have behaved with 3 phases, first being the quiz intro and start button, second the actual quiz content, and third the final score with a box to input the users initials. One one phase was to be shown at a time and the highscores link would take the user to a different page that displays all the highscores with the abilityto reset them.
 
 ## Website
-
+https://luksvrd.github.io/Coding-Quiz/
+![Code Quiz Screenshot] (Screenshot 2022-11-07 at 9.50.50 PM.png)
 
 
 ## Contributions
