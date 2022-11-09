@@ -111,3 +111,6 @@ quiz.addEventListener("click", handleclick);
 startButton.addEventListener("click", init);
 
 form.addEventListener("submit", handleSubmit);
+
+// Sources: slack/homework-challenges/Manav
+//https://www.youtube.com/watch?v=riDzcEQbX6k&t=1228s
