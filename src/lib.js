@@ -1,8 +1,11 @@
 // list of Questions, Choices, and Answers
 export const QUESTIONS = [
   {
+    // this goes in the <h2> element
     title: "Commonly used data types DO NOT include:",
+    // This will go in the <li> elements
     choices: ["strings", "booleans", "alerts", "numbers"],
+    // This is the correct answer
     answer: "alerts",
   },
 
@@ -19,11 +22,15 @@ export const QUESTIONS = [
 ];
 
 export const getSortedScores = () => {
-  const scores = JSON.parse(localStorage.getItem("scores"))?.sort(
+  const scores =
+  // Parse JSON form localStorage into a JavaScript object (array)
+  // Using optional chaining to avoid an error if the key doesn't exist
+  JSON.parse(localStorage.getItem("scores"))?.sort(
     (a, b) =>
     // Desending order
     b.score - a.score
   );
+  // Logical OR shortcircuiting - If there are no scores, return an empty array
   return scores || [];
 };
 
