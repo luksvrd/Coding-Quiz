@@ -5,53 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css" />
-    <link rel="stylesheet" href="./src/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./src/input.css" />
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Mali&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:,">
     <title>JavaScript Quiz!</title>
   </head>
-  <body class="outter-container">
+  <body class="container mx-auto mt-6 flex flex-col gap-y-12">
         <!-- TOP BAR -->
-        <header class="top-bar">
-          <a href="high-scores.html">High Scores</a>
+        <header class="flex justify-between">
+          <a href="./high-scores.html">High Scores</a>
           <p>
-            Time Remaining:<span id="seconds"></span></p>
+            Time Remaining:&nbsp;<span id="seconds" class="ml-2 text-lg font-medium"></span></p>
         </header>
 
-        <!-- INNER box -->
-        <main class="inner-container">
+        <main class="flex flex-col items-center gap-y-4">
+        <h1>Coding Quiz</h1>
+
+          <!--QUIZ INTRO (HIDDEN ONCE QUIZ START)-->
           <section id="intro">
             <h1>Welcome to the JavaScript Quiz!</h1>
-          <!-- --------------------------------- -->
-          <!--QUIZ INTRO (HIDDEN ONCE QUIZ START)-->
-          <!-- --------------------------------- -->
-
             <p>Answer the multiple choice code questions within the given time. 10 seconds will be deducted after every inccorect answer. To begin, click the Start button!</p>
-            <button id="start-btn" type="button">Start Quiz!</button>
+            <button id="start-quiz" type="button">Start Quiz!</button>
           </section>
 
-          <!-- --------------------------------- -->
-          <!-- QUIZ QUESTIONS (HIDDEN FOR HIGHSCORES)-->
-          <!-- --------------------------------- -->
-            <section id="quiz" class="hidden">
-              <h2></h2>
-              <ul id="answers" class="answer-grid">
-                <!-- THIS WILL BE GENERATED IN .JS -->
-                <!-- <li><button class="btn">Answer 1</button></li>
-                <li><button class="btn">Answer 2</button></li>
-                <li><button class="btn">Answer 3</button></li>
-                <li><button class="btn">Answer 4</button></li> -->
-              </ul>
-              <!-- Correct/Wrong -->
-              <p class="hidden"></p>
-            </section>
+          <!-- QUIZ QUESTIONS SHOWN ON QUIZ START (HIDDEN FOR HIGHSCORES)-->
+          <section id="quiz" class="hidden">
+            <h2></h2>
+            <ul> </ul>
 
+            <!-- ---------"Correct/Wrong"----------- -->
+            <p class="hidden w-full border-t-2 pt-2 text-center text-lg font-semibold"></p>
+          </section>
 
-            <!-- --------------------------------- -->
             <!-- HIGHSCORE/INITIALS SCREEN ()-->
-            <!-- --------------------------------- -->
-
             <section id="results" class="hidden">
               <h2>Quiz Complete!</h2>
               <p>Your Final Score is:
@@ -59,16 +45,14 @@
                   <!-- Score goes here -->
                 </span>
               </p>
-
-              <form>
-                <label for="initials">Enter Initials: </label>
+              <form class="flex items-center gap-x-2">
+                <label for="initials">Enter Initials:</label>
                 <input type="text" id="initials" name="initials"/>
-                <button type="submit">Submit</button>
+                <button type="submit" class="ml-2">Submit</button>
               </form>
             </section>
-
         </main>
 
-    <script type="module" src="./src/quiz.js"></script>
+    <script type="module" src="./src/game.service.js"></script>
   </body>
 </html>
