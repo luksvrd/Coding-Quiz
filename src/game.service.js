@@ -1,4 +1,4 @@
-import { QUESTIONS, updateScores } from "./lib";
+import { QUESTIONS, updateScores } from "./lib.js";
 
 import {
   form,
@@ -11,13 +11,13 @@ import {
   resultsSpan,
   secondsP,
   startButton,
-} from "./dom";
+} from "./dom.js";
 
 let TIME_LIMIT = 80;
 
 let currentQuestionI = 0;
 
-function handleclick(event) {
+function handleClick(event) {
   const isCorrectAnswer = isCorrect(event);
 
   renderQuestionResult(isCorrectAnswer);
@@ -51,7 +51,6 @@ function isCorrect(event) {
   if (choice.textContent === correct) return true;
 
   return false;
-
 }
 
 function keepTime() {
@@ -88,18 +87,18 @@ function renderNxtQuestion() {
 
     li.innerHTML = `<button type="button">${choice}</button>`;
     quizList.appendChild(li);
-  })
+  });
 }
 
 function renderQuestionResult(results) {
   quizP.classList.toggle("hidden");
 
   if (results) {
-    quizP.textContent.add("border-green-500", "text-green-500");
+    quizP.classList.add("border-green-500", "text-green-500");
     quizP.textContent = "Correct!";
 
   } else {
-    quizP.textContent.add("border-red-500", "text-red-500");
+    quizP.classList.add("border-red-500", "text-red-500");
     quizP.textContent = "Wrong!";
   }
 }
@@ -122,7 +121,7 @@ function init() {
   keepTime();
 }
 
-quiz.addEventListener("click", handleclick);
+quiz.addEventListener("click", handleClick);
 startButton.addEventListener("click", init);
 
 form.addEventListener("submit", handleSubmit);

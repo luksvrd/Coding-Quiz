@@ -1,5 +1,5 @@
-import { highScoreUL, resetBtn } from "./dom";
-import { getSortedScores } from "./lib";
+import { highScoreUL, resetBtn } from "./dom.js";
+import { getSortedScores } from "./lib.js";
 
 const scores = getSortedScores();
 

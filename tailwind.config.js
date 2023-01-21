@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./index.html", "src/**/*.js"],
+  content: ["./index.html", "./src/game.service.js"],
   theme: {
     extend: {},
   },plugins: [
