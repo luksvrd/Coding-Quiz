@@ -8,7 +8,7 @@ export const quizP = quiz?.querySelector("#quiz p");
 export const quizH2 = quiz?.querySelector("#quiz h2");
 export const quizList = quiz?.querySelector("#quiz ul");
 
-export const resetBtn = document.querySelector("#button [type='reset']");
+export const resetBtn = document.querySelector("button[type='reset']");
 
 export const secondsP = document.getElementById("seconds");
 export const startButton = document.getElementById("start-quiz");

@@ -3,37 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@1.x/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <!-- <link rel="stylesheet" href="https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css" /> -->
-    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" type="text/css" href="/input.css" />
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Mali&display=swap" rel="stylesheet"> -->
-    <title>JavaScript Quiz!</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Mali&display=swap" rel="stylesheet"> -->
+    <title>Coding Quiz!</title>
   </head>
-  <body class="container mx-auto mt-6 flex flex-col gap-y-12">
+  <body class="container mx-auto mt-6 flex flex-col gap-y-12 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
         <!-- TOP BAR -->
         <header class="flex justify-between">
-          <a href="./high-scores.html">High Scores</a>
+          <a href="./high-scores.html" class="text-gray-900 bg-white border border-gray-300 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none shadow-lg shadow-black-500/50 dark:shadow-lg dark:shadow-black-800/80 font-medium rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-2">
+            High Scores
+        </a>
           <p>
-            Time Remaining:&nbsp;<span id="seconds" class="ml-2 text-lg font-medium"></span></p>
+            Time Remaining:&nbsp;<span id="seconds" class="ml-2 text-lg font-medium"></span>
+          </p>
         </header>
 
         <main class="flex flex-col items-center gap-y-4">
-        <h1>Coding Quiz</h1>
 
           <!--QUIZ INTRO (HIDDEN ONCE QUIZ START)-->
-          <section id="intro">
-            <h1>Welcome to the JavaScript Quiz!</h1>
-            <p>Answer the multiple choice code questions within the given time. 10 seconds will be deducted after every inccorect answer. To begin, click the Start button!</p>
-            <button id="start-quiz" type="button">Start Quiz!</button>
+          <section id="intro" class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700">
+            <h1>Welcome to the Coding Quiz!</h1>
+            <p class="p-5">Answer the multiple choice code questions within the given time. 10 seconds will be deducted after every inccorect answer. To begin, click the Start button!</p>
+            <button id="start-quiz" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" type="button">Start Quiz!</button>
           </section>
 
           <!-- QUIZ QUESTIONS SHOWN ON QUIZ START (HIDDEN FOR HIGHSCORES)-->
           <section id="quiz" class="hidden">
             <h2></h2>
-            <ul> </ul>
-
+            <ul></ul>
             <!-- ---------"Correct/Wrong"----------- -->
             <p class="hidden w-full border-t-2 pt-2 text-center text-lg font-semibold"></p>
           </section>
@@ -49,11 +53,11 @@
               <form class="flex items-center gap-x-2">
                 <label for="initials">Enter Initials:</label>
                 <input type="text" id="initials" name="initials"/>
-                <button type="submit" class="ml-2">Submit</button>
+                <button type="submit" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Submit</button>
               </form>
             </section>
         </main>
 
-    <script type="module" src="./src/game.service.js"></script>
+    <script type="module" src="/src/gameService.js"></script>
   </body>
 </html>

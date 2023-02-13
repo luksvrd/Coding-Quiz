@@ -10,5 +10,6 @@
   "files.autoSave": "onFocusChange",
   "files.trimTrailingWhitespace": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "javascript.validate.enable": false
+  "javascript.validate.enable": false,
+  "liveServer.settings.port": 5501
 }
