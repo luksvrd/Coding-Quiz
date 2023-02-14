@@ -43,7 +43,6 @@ export const QUESTIONS = [
     ],
     answer: "all of the above",
   },
-  {},
 ];
 
 export const getSortedScores = () => {
