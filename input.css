@@ -5,12 +5,12 @@
 /* Your custom styles here */
 /* gradient-right: linear-gradient(90deg, #fec5bbff, #fcd5ceff, #fae1ddff, #f8edebff, #e8e8e4ff, #d8e2dcff, #ece4dbff, #ffe5d9ff, #ffd7baff, #fec89aff); */
 /* Implent the above into a background gradient for the body tag */
-body {
-  background: radial-gradient(#ffd6ffff, #e7c6ffff, #c8b6ffff, #b8c0ffff, #bbd0ffff);
+/* body {
+  background: radial-gradient(#ffd6ffff, #e7c6ffff, #c8b6ffff, #b8c0ffff, #bbd0ffff); */
   /* Radial gradient */
-    background-size: 1000% 1000%;
+    /* background-size: 1000% 1000%;
   background-repeat: no-repeat;
-}
+} */
 
 /* #intro {
     background: radial-gradient(#ffd6ffff, #e7c6ffff, #c8b6ffff, #b8c0ffff, #bbd0ffff);
