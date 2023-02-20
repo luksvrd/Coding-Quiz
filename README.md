@@ -1,5 +1,5 @@
 # Coding Quiz
-![Coding Quiz](https://github.com/luksvrd/Social-Book-Club/blob/images/quizSC.jpg)
+![Coding Quiz](https://github.com/luksvrd/Coding-Quiz/blob/master/images/quizSC.jpg)
 ## Built Using
 HTML, CSS, JavaScript, Tailwind, Vite
 
